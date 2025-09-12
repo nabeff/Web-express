@@ -8,7 +8,7 @@ const About = () => {
   return (
     <PageWrapper>
       <Nav />
-      <main className="min-h-screen py-20 space-y-16">
+      <main >
         <SplitRevealText
           text="Proud to Launch: The New Henry Smith Foundation Website"
           className="text-6xl p-4 leading-tight w-[70%]"

@@ -29,7 +29,7 @@ export default function SplitButton({
             </Link>
 
             {/* Circle Icon */}
-            <span className={`transform -translate-x-[8px] transition-all duration-300 group-hover:translate-x-[6px] group-hover:rotate-220 h-[2.5rem] w-[2.5rem] ${bgColor} rounded-full flex items-center justify-center`}>
+            <span className={`transform -translate-x-[8px] transition-all duration-300 group-hover:translate-x-[6px] group-hover:rotate-45 h-[2.5rem] w-[2.5rem] ${bgColor} rounded-full flex items-center justify-center`}>
                 <img src={imgSrc} alt="icon" className={`${iconClassName}`} />
             </span>
         </button>

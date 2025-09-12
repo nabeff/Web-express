@@ -1,8 +1,12 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function SplitRevealText({
   text,
@@ -12,6 +16,18 @@ export default function SplitRevealText({
   className?: string;
 }) {
   const textRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const [delay, setDelay] = useState(0);
+
+  useEffect(() => {
+    const previousPath = sessionStorage.getItem("previousPath");
+
+    if (previousPath && previousPath !== pathname) {
+      setDelay(3); // Navigated from another page
+    } else {
+      setDelay(0); // Same page or initial load
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (!textRef.current) return;
@@ -29,17 +45,22 @@ export default function SplitRevealText({
       gsap.from(split.lines, {
         yPercent: 100,
         opacity: 0,
-        delay: 1.2,
         duration: 0.8,
         stagger: 0.3,
         ease: "expo.out",
+        delay: delay,
+        scrollTrigger: {
+          trigger: textRef.current,
+          start: "bottom bottom",
+          toggleActions: "play none none none",
+        },
       });
 
       return () => {
         split.revert();
       };
     });
-  }, []);
+  }, [delay]);
 
   return (
     <div

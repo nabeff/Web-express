@@ -49,7 +49,7 @@ const Nav = () => {
         ))}
       </div>
 
-      <SplitButton   text="Start a Project" imgSrc="/compass.svg" href="/about"  color="secondary" iconClassName="w-8 h-8" />
+      <SplitButton   text="Start a project" imgSrc="/compass.svg" href="/about"  color="secondary" iconClassName="w-6 h-6" />
 
       </div>
     </nav>

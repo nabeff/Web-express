@@ -10,7 +10,7 @@ const About = () => {
   return (
     <PageWrapper>
       <Nav />
-      <main className="container m-auto min-h-screen py-20 space-y-16">
+      <main className="container m-auto ">
 
         <div className="flex justify-between">
 
