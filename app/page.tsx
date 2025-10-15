@@ -130,6 +130,8 @@ export default function Home() {
                 color="secondary"
                 iconClassName="w-7 h-7"
               />
+
+              
               <HoverLinkIcon
                 href="/about"
                 label="Meet the Team"
