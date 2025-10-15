@@ -56,7 +56,7 @@ export default function Home() {
         <VideoHero videoSrc="/video/herovideo.mp4" />
 
         {/* Who we are */}
-        {/* <section className="container m-auto flex justify-between">
+        <section className="container m-auto flex justify-between">
           <div className="flex gap-10 items-start">
             <div className="flex items-center gap-1">
               <div className="w-[6px] h-[6px] rounded-full bg-black"></div>
@@ -94,17 +94,8 @@ export default function Home() {
               />
             </div>
           </div>
-        </section> */}
-
-
-        {/* Work / Blog Section */}
-
-        {/* <OvertakerMarquee /> */}
-
-        <section className="mt-16">
-          <WorkScroller items={workData} />
         </section>
-
+ b
 
         <section>
           <SplitRevealText
