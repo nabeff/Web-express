@@ -122,6 +122,8 @@ export default function Home() {
               />
             </div>
 
+
+
             <div className="flex gap-6 ">
               <SplitButton
                 text="Contact Us"
@@ -130,6 +132,8 @@ export default function Home() {
                 color="secondary"
                 iconClassName="w-7 h-7"
               />
+
+
 
               
               <HoverLinkIcon
