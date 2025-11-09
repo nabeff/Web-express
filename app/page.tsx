@@ -114,7 +114,7 @@ export default function Home() {
      
 
           <div className="flex flex-col gap-5 w-[60%]">
-            <div className="">
+            <div className="w-auto">
             
               <SplitRevealText
                 text="An independent web design and branding agency in Morocco set up in 2025 who care, build relationships, have industry experience."
